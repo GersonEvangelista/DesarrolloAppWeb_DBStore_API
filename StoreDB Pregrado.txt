@@ -1,0 +1,288 @@
+CREATE DATABASE StoreDB
+GO
+USE [StoreDB]
+GO
+/****** Object:  Table [dbo].[Category]    Script Date: 19/09/2023 07:22:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Category](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Description] [nvarchar](100) NULL,
+	[IsActive] [bit] NULL,
+ CONSTRAINT [PK_Category] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Favorite]    Script Date: 19/09/2023 07:22:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Favorite](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[UserId] [int] NULL,
+	[ProductId] [int] NULL,
+	[CreatedAt] [datetime] NULL,
+ CONSTRAINT [PK_Favorite] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[OrderDetail]    Script Date: 19/09/2023 07:22:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[OrderDetail](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[OrdersId] [int] NULL,
+	[ProductId] [int] NULL,
+	[Quantity] [int] NULL,
+	[Price] [decimal](18, 2) NULL,
+	[CreatedAt] [datetime] NULL,
+ CONSTRAINT [PK_OrderDetail] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Orders]    Script Date: 19/09/2023 07:22:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Orders](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[CreatedAt] [datetime] NULL,
+	[UserId] [int] NULL,
+	[Status] [char](1) NULL,
+	[TotalAmount] [decimal](18, 2) NULL,
+ CONSTRAINT [PK_Orders] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Payment]    Script Date: 19/09/2023 07:22:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Payment](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[OrdersId] [int] NULL,
+	[TotalAmount] [decimal](18, 2) NULL,
+	[PaymentMethod] [char](10) NULL,
+	[Status] [char](1) NULL,
+ CONSTRAINT [PK_Payment] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Product]    Script Date: 19/09/2023 07:22:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Product](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Description] [nvarchar](100) NULL,
+	[ImageUrl] [nvarchar](max) NULL,
+	[Stock] [int] NULL,
+	[Price] [decimal](18, 2) NULL,
+	[Discount] [int] NULL,
+	[CategoryId] [int] NULL,
+	[IsActive] [bit] NULL,
+ CONSTRAINT [PK_Product] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ProductDetail]    Script Date: 19/09/2023 07:22:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ProductDetail](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[ProductId] [int] NULL,
+	[ImageUrl] [nvarchar](max) NULL,
+	[IsActive] [bit] NULL,
+	[CreatedAt] [datetime] NULL,
+ CONSTRAINT [PK_ProductDetail] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[User]    Script Date: 19/09/2023 07:22:38 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[User](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [nvarchar](50) NULL,
+	[LastName] [nvarchar](50) NULL,
+	[DateOfBirth] [date] NULL,
+	[Country] [nvarchar](50) NULL,
+	[Address] [nvarchar](100) NULL,
+	[Email] [nvarchar](100) NULL,
+	[Password] [nvarchar](100) NULL,
+	[IsActive] [bit] NULL,
+	[Type] [char](1) NULL,
+ CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Category] ON 
+GO
+INSERT [dbo].[Category] ([Id], [Description], [IsActive]) VALUES (1, N'Celulares', 1)
+GO
+INSERT [dbo].[Category] ([Id], [Description], [IsActive]) VALUES (2, N'Cocina', 1)
+GO
+INSERT [dbo].[Category] ([Id], [Description], [IsActive]) VALUES (3, N'Computadoras', 1)
+GO
+INSERT [dbo].[Category] ([Id], [Description], [IsActive]) VALUES (4, N'Juguetes', 1)
+GO
+INSERT [dbo].[Category] ([Id], [Description], [IsActive]) VALUES (5, N'Perfumes', 1)
+GO
+INSERT [dbo].[Category] ([Id], [Description], [IsActive]) VALUES (6, N'Refrigeradoras', 1)
+GO
+INSERT [dbo].[Category] ([Id], [Description], [IsActive]) VALUES (7, N'Ropa', 1)
+GO
+INSERT [dbo].[Category] ([Id], [Description], [IsActive]) VALUES (8, N'Televisores', 1)
+GO
+INSERT [dbo].[Category] ([Id], [Description], [IsActive]) VALUES (9, N'Zapatos', 1)
+GO
+SET IDENTITY_INSERT [dbo].[Category] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Favorite] ON 
+GO
+INSERT [dbo].[Favorite] ([Id], [UserId], [ProductId], [CreatedAt]) VALUES (1, 1, 1, CAST(N'2023-03-13T23:51:10.710' AS DateTime))
+GO
+INSERT [dbo].[Favorite] ([Id], [UserId], [ProductId], [CreatedAt]) VALUES (2, 1, 2, CAST(N'2023-05-12T22:46:55.673' AS DateTime))
+GO
+INSERT [dbo].[Favorite] ([Id], [UserId], [ProductId], [CreatedAt]) VALUES (3, 1, 3, CAST(N'2023-05-12T22:46:59.887' AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[Favorite] OFF
+GO
+SET IDENTITY_INSERT [dbo].[OrderDetail] ON 
+GO
+INSERT [dbo].[OrderDetail] ([Id], [OrdersId], [ProductId], [Quantity], [Price], [CreatedAt]) VALUES (6, 7, 3, 4, CAST(10.00 AS Decimal(18, 2)), CAST(N'2023-03-14T02:12:48.013' AS DateTime))
+GO
+INSERT [dbo].[OrderDetail] ([Id], [OrdersId], [ProductId], [Quantity], [Price], [CreatedAt]) VALUES (13, 10, 1, 5, CAST(10.00 AS Decimal(18, 2)), CAST(N'2023-05-13T00:58:57.040' AS DateTime))
+GO
+INSERT [dbo].[OrderDetail] ([Id], [OrdersId], [ProductId], [Quantity], [Price], [CreatedAt]) VALUES (14, 10, 2, 3, CAST(15.00 AS Decimal(18, 2)), CAST(N'2023-05-13T00:58:57.040' AS DateTime))
+GO
+INSERT [dbo].[OrderDetail] ([Id], [OrdersId], [ProductId], [Quantity], [Price], [CreatedAt]) VALUES (15, 10, 3, 1, CAST(20.00 AS Decimal(18, 2)), CAST(N'2023-05-13T00:58:57.040' AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[OrderDetail] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Orders] ON 
+GO
+INSERT [dbo].[Orders] ([Id], [CreatedAt], [UserId], [Status], [TotalAmount]) VALUES (7, CAST(N'2023-03-14T02:12:48.013' AS DateTime), 1, N'A', CAST(0.00 AS Decimal(18, 2)))
+GO
+INSERT [dbo].[Orders] ([Id], [CreatedAt], [UserId], [Status], [TotalAmount]) VALUES (10, CAST(N'2023-05-13T00:58:57.040' AS DateTime), 1, N'A', CAST(115.00 AS Decimal(18, 2)))
+GO
+SET IDENTITY_INSERT [dbo].[Orders] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Product] ON 
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (1, N'Samsung Galaxy S21', N'https://www.example.com/samsung-galaxy-s21.jpg', 10, CAST(799.99 AS Decimal(18, 2)), 0, 1, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (2, N'iPhone 12', N'https://www.example.com/iphone-12.jpg', 5, CAST(899.99 AS Decimal(18, 2)), 0, 1, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (3, N'OnePlus 9 Pro', N'https://www.example.com/oneplus-9-pro.jpg', 8, CAST(749.99 AS Decimal(18, 2)), 0, 1, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (4, N'Olla a presión eléctrica', N'https://www.example.com/olla-electrica.jpg', 15, CAST(149.99 AS Decimal(18, 2)), 10, 2, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (5, N'Licuadora de alta potencia', N'https://www.example.com/licuadora-alta-potencia.jpg', 12, CAST(89.99 AS Decimal(18, 2)), 0, 2, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (6, N'Cafetera programable', N'https://www.example.com/cafetera-programable.jpg', 7, CAST(129.99 AS Decimal(18, 2)), 0, 2, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (7, N'Laptop Dell XPS 13', N'https://www.example.com/dell-xps-13.jpg', 20, CAST(1299.99 AS Decimal(18, 2)), 5, 3, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (8, N'PC de escritorio HP Pavilion', N'https://www.example.com/hp-pavilion.jpg', 10, CAST(999.99 AS Decimal(18, 2)), 0, 3, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (9, N'Monitor gaming LG 27"', N'https://www.example.com/lg-27-gaming.jpg', 15, CAST(399.99 AS Decimal(18, 2)), 0, 3, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (10, N'Set de bloques de construcción', N'https://www.example.com/bloques-construccion.jpg', 25, CAST(29.99 AS Decimal(18, 2)), 0, 4, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (11, N'Juego de mesa familiar', N'https://www.example.com/juego-mesa.jpg', 18, CAST(19.99 AS Decimal(18, 2)), 0, 4, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (12, N'Muñeca de colección', N'https://www.example.com/muneca-coleccion.jpg', 6, CAST(99.99 AS Decimal(18, 2)), 0, 4, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (13, N'Eau de parfum Chanel No. 5', N'https://www.example.com/chanel-no5.jpg', 10, CAST(149.99 AS Decimal(18, 2)), 0, 5, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (14, N'Colonia Dior Sauvage', N'https://www.example.com/dior-sauvage.jpg', 8, CAST(129.99 AS Decimal(18, 2)), 0, 5, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (15, N'Perfume Dolce & Gabbana Light Blue', N'https://www.example.com/dolce-gabbana-light-blue.jpg', 12, CAST(99.99 AS Decimal(18, 2)), 0, 5, 1)
+GO
+INSERT [dbo].[Product] ([Id], [Description], [ImageUrl], [Stock], [Price], [Discount], [CategoryId], [IsActive]) VALUES (16, N'asdsad', N'C:\Users\luisc\source\repos\UESAN.Shopping\UESAN.Shopping.API\files\0f100b0e-abed-4981-9919-890ae0a74456.png', 22, CAST(22.00 AS Decimal(18, 2)), NULL, 1, 1)
+GO
+SET IDENTITY_INSERT [dbo].[Product] OFF
+GO
+SET IDENTITY_INSERT [dbo].[User] ON 
+GO
+INSERT [dbo].[User] ([Id], [FirstName], [LastName], [DateOfBirth], [Country], [Address], [Email], [Password], [IsActive], [Type]) VALUES (1, N'Luis', N'Chang', CAST(N'1990-03-05' AS Date), N'PERU', N'Av. Las Cantuarias 3883', N'lchang86@gmail.com', N'12345678', 1, N'U')
+GO
+INSERT [dbo].[User] ([Id], [FirstName], [LastName], [DateOfBirth], [Country], [Address], [Email], [Password], [IsActive], [Type]) VALUES (2, N'Lucas', N'Vasquez', CAST(N'1998-03-06' AS Date), N'SPAIN', N'Av. Los Flamencos 999', N'lucas@test.com', N'12345678', 1, N'U')
+GO
+INSERT [dbo].[User] ([Id], [FirstName], [LastName], [DateOfBirth], [Country], [Address], [Email], [Password], [IsActive], [Type]) VALUES (13, N'Alberto', N'Uribe', CAST(N'1992-03-12' AS Date), N'PERU', N'Av. Los eucaliptos 3883', N'sitig46874@proexbol.com', N'12345678', 1, N'U')
+GO
+INSERT [dbo].[User] ([Id], [FirstName], [LastName], [DateOfBirth], [Country], [Address], [Email], [Password], [IsActive], [Type]) VALUES (14, N'Lionel', N'Messi', CAST(N'1987-01-01' AS Date), N'ARGENTINA', N'Av. De la Boca 2939', N'messi@argentina.com', N'12345678', 1, N'U')
+GO
+INSERT [dbo].[User] ([Id], [FirstName], [LastName], [DateOfBirth], [Country], [Address], [Email], [Password], [IsActive], [Type]) VALUES (17, N'Cristiano', N'Ronaldo', CAST(N'1985-01-01' AS Date), N'PORTUGAL', N'Av. Alonso de MOlina 1652', N'cr7@portugal.com', N'cr7123', 1, N'U')
+GO
+SET IDENTITY_INSERT [dbo].[User] OFF
+GO
+ALTER TABLE [dbo].[Favorite]  WITH CHECK ADD  CONSTRAINT [FK_Favorite_Product] FOREIGN KEY([ProductId])
+REFERENCES [dbo].[Product] ([Id])
+GO
+ALTER TABLE [dbo].[Favorite] CHECK CONSTRAINT [FK_Favorite_Product]
+GO
+ALTER TABLE [dbo].[Favorite]  WITH CHECK ADD  CONSTRAINT [FK_Favorite_User] FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([Id])
+GO
+ALTER TABLE [dbo].[Favorite] CHECK CONSTRAINT [FK_Favorite_User]
+GO
+ALTER TABLE [dbo].[OrderDetail]  WITH CHECK ADD  CONSTRAINT [FK_OrderDetail_Orders] FOREIGN KEY([OrdersId])
+REFERENCES [dbo].[Orders] ([Id])
+GO
+ALTER TABLE [dbo].[OrderDetail] CHECK CONSTRAINT [FK_OrderDetail_Orders]
+GO
+ALTER TABLE [dbo].[OrderDetail]  WITH CHECK ADD  CONSTRAINT [FK_OrderDetail_Product] FOREIGN KEY([ProductId])
+REFERENCES [dbo].[Product] ([Id])
+GO
+ALTER TABLE [dbo].[OrderDetail] CHECK CONSTRAINT [FK_OrderDetail_Product]
+GO
+ALTER TABLE [dbo].[Orders]  WITH CHECK ADD  CONSTRAINT [FK_Orders_User] FOREIGN KEY([UserId])
+REFERENCES [dbo].[User] ([Id])
+GO
+ALTER TABLE [dbo].[Orders] CHECK CONSTRAINT [FK_Orders_User]
+GO
+ALTER TABLE [dbo].[Payment]  WITH CHECK ADD  CONSTRAINT [FK_Payment_Orders] FOREIGN KEY([OrdersId])
+REFERENCES [dbo].[Orders] ([Id])
+GO
+ALTER TABLE [dbo].[Payment] CHECK CONSTRAINT [FK_Payment_Orders]
+GO
+ALTER TABLE [dbo].[Product]  WITH CHECK ADD  CONSTRAINT [FK_Product_Category] FOREIGN KEY([CategoryId])
+REFERENCES [dbo].[Category] ([Id])
+GO
+ALTER TABLE [dbo].[Product] CHECK CONSTRAINT [FK_Product_Category]
+GO
+ALTER TABLE [dbo].[ProductDetail]  WITH CHECK ADD  CONSTRAINT [FK_ProductDetail_Product] FOREIGN KEY([ProductId])
+REFERENCES [dbo].[Product] ([Id])
+GO
+ALTER TABLE [dbo].[ProductDetail] CHECK CONSTRAINT [FK_ProductDetail_Product]
+GO

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "4BGCfLNt1VIgL8DqD2jsJQCxu9mGx2AJK3j0Gj20dGw=",
+  "Source": "UESAN.StoreDB.API",
+  "BasePath": "_content/UESAN.StoreDB.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

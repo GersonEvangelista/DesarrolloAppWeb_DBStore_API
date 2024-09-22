@@ -1,0 +1,14 @@
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\bin\Debug\net8.0\UESAN.StoreDB.DOMAIN.deps.json
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\bin\Debug\net8.0\UESAN.StoreDB.DOMAIN.runtimeconfig.json
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\bin\Debug\net8.0\UESAN.StoreDB.DOMAIN.dll
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\bin\Debug\net8.0\UESAN.StoreDB.DOMAIN.pdb
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.csproj.AssemblyReference.cache
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.GeneratedMSBuildEditorConfig.editorconfig
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.AssemblyInfoInputs.cache
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.AssemblyInfo.cs
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.csproj.CoreCompileInputs.cache
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.dll
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\refint\UESAN.StoreDB.DOMAIN.dll
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.pdb
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.genruntimeconfig.cache
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\ref\UESAN.StoreDB.DOMAIN.dll
