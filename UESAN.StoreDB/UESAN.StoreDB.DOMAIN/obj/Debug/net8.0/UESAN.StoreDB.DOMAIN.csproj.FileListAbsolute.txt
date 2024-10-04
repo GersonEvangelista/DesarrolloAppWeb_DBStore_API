@@ -12,3 +12,4 @@ C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN
 C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.pdb
 C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.genruntimeconfig.cache
 C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\ref\UESAN.StoreDB.DOMAIN.dll
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.DOMAIN\obj\Debug\net8.0\UESAN.StoreDB.DOMAIN.sourcelink.json

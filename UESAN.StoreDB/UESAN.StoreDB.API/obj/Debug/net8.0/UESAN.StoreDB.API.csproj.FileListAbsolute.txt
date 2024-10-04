@@ -253,3 +253,4 @@ C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN
 C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.API\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.API\bin\Debug\net8.0\UESAN.StoreDB.DOMAIN.dll
 C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.API\bin\Debug\net8.0\UESAN.StoreDB.DOMAIN.pdb
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\UESAN.StoreDB\UESAN.StoreDB.API\obj\Debug\net8.0\UESAN.StoreDB.API.sourcelink.json

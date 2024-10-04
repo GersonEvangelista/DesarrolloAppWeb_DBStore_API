@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using UESAN.StoreDB.DOMAIN.Core.DTO;
 using UESAN.StoreDB.DOMAIN.Core.Entities;
 using UESAN.StoreDB.DOMAIN.Infrastructure.Data;
 
@@ -73,16 +74,30 @@ namespace UESAN.StoreDB.API.Controllers
             return NoContent();
         }
 
+        //INNER JOIN
+        public async Task<Category> GetCategoryWithProducts(int id)
+        {
+            var category = await _context
+                .Category
+                .Where(c => c.Id == id && c.IsActive == true)
+                .Include(p => p.Product)
+                .FirstOrDefaultAsync();
+            return category;
+        }
+
         // POST: api/Categories
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Category>> PostCategory(Category category)
         {
+            category.IsActive = true; //Para que por default agregre con estado = activo y ya no introducirlo por "raw" de postman
             _context.Category.Add(category);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetCategory", new { id = category.Id }, category);
         }
+
+        
 
         // DELETE: api/Categories/5
         [HttpDelete("{id}")]
@@ -104,5 +119,8 @@ namespace UESAN.StoreDB.API.Controllers
         {
             return _context.Category.Any(e => e.Id == id);
         }
+
+
+
     }
 }

@@ -1,0 +1,15 @@
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\bin\Debug\net8.0\StoreDB_DOMAIN.deps.json
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\bin\Debug\net8.0\StoreDB_DOMAIN.runtimeconfig.json
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\bin\Debug\net8.0\StoreDB_DOMAIN.dll
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\bin\Debug\net8.0\StoreDB_DOMAIN.pdb
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\StoreDB_DOMAIN.csproj.AssemblyReference.cache
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\StoreDB_DOMAIN.GeneratedMSBuildEditorConfig.editorconfig
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\StoreDB_DOMAIN.AssemblyInfoInputs.cache
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\StoreDB_DOMAIN.AssemblyInfo.cs
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\StoreDB_DOMAIN.csproj.CoreCompileInputs.cache
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\StoreDB_DOMAIN.sourcelink.json
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\StoreDB_DOMAIN.dll
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\refint\StoreDB_DOMAIN.dll
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\StoreDB_DOMAIN.pdb
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\StoreDB_DOMAIN.genruntimeconfig.cache
+C:\ESAN\CICLO_8_ESAN\Courses\DesarrolloAppWeb\Week5_CrearAPI\StoreDB_API\StoreDB_DOMAIN\obj\Debug\net8.0\ref\StoreDB_DOMAIN.dll
